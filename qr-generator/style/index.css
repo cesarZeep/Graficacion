@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1 0 auto;
+  max-width: 500px;
+}
+
+footer#footer {
+  flex-shrink: 0;
+}

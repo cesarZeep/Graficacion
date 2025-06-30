@@ -1,0 +1,17 @@
+{
+  "name": "flappy-bird-ts",
+  "version": "1.0.0",
+  "description": "Flappy Bird en TypeScript",
+  "main": "dist/main.js",
+"scripts": {
+  "build": "tsc",
+  "watch": "tsc --watch",
+  "start": "live-server --open=./index.html",
+  "dev": "npm run watch"
+}
+,
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "live-server": "^1.2.2"
+  }
+}

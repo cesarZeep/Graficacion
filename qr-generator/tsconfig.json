@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2017",                    // Soporta padStart, async/await, etc.
+    "module": "es2015",                    // Módulos ES6 para usar con `type="module"`
+    "lib": ["es2017", "dom"],              // Acceso a métodos modernos y API del navegador
+    "strict": true,                        // Reglas estrictas de TypeScript
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",                    // Salida de archivos compilados
+    "rootDir": "./src",                    // Carpeta raíz de tus `.ts`
+    "sourceMap": true                      // Para depuración (opcional)
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
