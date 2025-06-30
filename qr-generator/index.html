@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador QR TypeScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .qr-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        #qr-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        #qr-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        #generate-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        #generate-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .qr-code-container {
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .custom-controls {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .control-group {
+            margin-bottom: 10px;
+        }
+        
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .control-group input[type="color"] {
+            width: 50px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .control-group input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>Generador de Códigos QR</h1>
+        
+        <div class="input-group">
+            <input type="text" id="qr-input" placeholder="Ingresa URL o texto">
+            <button id="generate-btn">Generar</button>
+        </div>
+        
+        <div class="custom-controls">
+            <div class="control-group">
+                <label for="dark-color">Color oscuro:</label>
+                <input type="color" id="dark-color" value="#000000">
+            </div>
+            <div class="control-group">
+                <label for="light-color">Color claro:</label>
+                <input type="color" id="light-color" value="#FFFFFF">
+            </div>
+            <div class="control-group">
+                <label for="size-slider">Tamaño módulos: <span id="size-value">8</span>px</label>
+                <input type="range" id="size-slider" min="2" max="20" value="8">
+            </div>
+        </div>
+        
+        <div class="qr-code-container">
+            <canvas id="qr-canvas" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <script src="./dist/src/index.js" type="module"></script>
+</body>
+</html>

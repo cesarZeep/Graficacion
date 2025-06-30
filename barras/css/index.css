@@ -1,0 +1,233 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Barra de navegación */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Tarjeta principal */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  background-color: #4a6fa5;
+  color: white;
+  font-weight: 600;
+  padding: 1.25rem;
+}
+
+/* Canvas del gráfico */
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Controles */
+.controls {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
+}
+
+.control-group {
+  margin-bottom: 1.5rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Estilo para los sliders - Versión mejorada */
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  outline: none;
+  margin-bottom: 1rem;
+  
+  /* Estándar */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Estilo para el thumb del slider */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4a6fa5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4a6fa5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4a6fa5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Selectores de color */
+.color-picker {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.color-option {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.color-option.active {
+  border-color: #4a6fa5;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #4a6fa5;
+}
+
+/* Footer */
+#footer {
+  background: linear-gradient(0deg, #1c3643, #273b47 25%, #1e5372);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #a0c4ff;
+  text-decoration: underline;
+}
+
+/* Efectos de hover para botones */
+.nav-link, .dropdown-item {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 10px;
+  }
+  
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .control-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .color-option {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card, .controls {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Efecto para las barras al interactuar */
+.bar-label {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.bar-label:hover {
+  color: #4a6fa5;
+  transform: translateX(5px);
+}
+/* Estilo para los ejes y escala */
+.axis-label {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  fill: #333;
+}
+
+.grid-line {
+  stroke: #f0f0f0;
+  stroke-width: 1;
+}
+
+.axis-line {
+  stroke: #333;
+  stroke-width: 1.5;
+}
+
+.tick-mark {
+  stroke: #333;
+  stroke-width: 1;
+}
